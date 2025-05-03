@@ -54,18 +54,33 @@ const person = {
   },
 };
 
-const copiedPerson = { ...person };
-console.log(copiedPerson);
-
-const hobbies = ["Sports", "Cooking"];
-hobbies.push("Programming");
-console.log(hobbies);
-
-const copied = [...hobbies, "kiam"];
-
-console.log(copied);
-
-const toArray = (...args) => {
-  return args;
+const printName = ({ name, age }) => {
+  console.log(name, age);
 };
-console.log(toArray(1, 2, 3, 4, 5));
+printName(person);
+
+const { name, age } = person;
+console.log(name);
+console.log(age);
+
+const hobbies = ["Sports", "Cooking", "wew", "wew"];
+
+const [hobby1, hobby2, ...shesh] = hobbies;
+
+console.log(hobby1, hobby2, shesh);
+
+// const copiedPerson = { ...person };
+// console.log(copiedPerson);
+
+// const hobbies = ["Sports", "Cooking"];
+// hobbies.push("Programming");
+// console.log(hobbies);
+
+// const copied = [...hobbies, "kiam"];
+
+// console.log(copied);
+
+// const toArray = (...args) => {
+//   return args;
+// };
+// console.log(toArray(1, 2, 3, 4, 5));
