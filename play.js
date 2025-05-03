@@ -46,6 +46,26 @@
 // );
 // console.log(hobbies);
 
+const person = {
+  name: "lance kian",
+  age: 29,
+  greet() {
+    console.log("Hi, I am " + this.name);
+  },
+};
+
+const copiedPerson = { ...person };
+console.log(copiedPerson);
+
 const hobbies = ["Sports", "Cooking"];
 hobbies.push("Programming");
 console.log(hobbies);
+
+const copied = [...hobbies, "kiam"];
+
+console.log(copied);
+
+const toArray = (...args) => {
+  return args;
+};
+console.log(toArray(1, 2, 3, 4, 5));
