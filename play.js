@@ -46,28 +46,28 @@
 // );
 // console.log(hobbies);
 
-const person = {
-  name: "lance kian",
-  age: 29,
-  greet() {
-    console.log("Hi, I am " + this.name);
-  },
-};
+// const person = {
+//   name: "lance kian",
+//   age: 29,
+//   greet() {
+//     console.log("Hi, I am " + this.name);
+//   },
+// };
 
-const printName = ({ name, age }) => {
-  console.log(name, age);
-};
-printName(person);
+// const printName = ({ name, age }) => {
+//   console.log(name, age);
+// };
+// printName(person);
 
-const { name, age } = person;
-console.log(name);
-console.log(age);
+// const { name, age } = person;
+// console.log(name);
+// console.log(age);
 
-const hobbies = ["Sports", "Cooking", "wew", "wew"];
+// const hobbies = ["Sports", "Cooking", "wew", "wew"];
 
-const [hobby1, hobby2, ...shesh] = hobbies;
+// const [hobby1, hobby2, ...shesh] = hobbies;
 
-console.log(hobby1, hobby2, shesh);
+// console.log(hobby1, hobby2, shesh);
 
 // const copiedPerson = { ...person };
 // console.log(copiedPerson);
@@ -84,3 +84,28 @@ console.log(hobby1, hobby2, shesh);
 //   return args;
 // };
 // console.log(toArray(1, 2, 3, 4, 5));
+
+const fetchData = () => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Done");
+    }, 1500);
+  });
+  return promise;
+};
+
+setTimeout(async () => {
+  console.log("Timer is done!");
+  try {
+    const text = await fetchData();
+    console.log(text);
+
+    const text2 = await fetchData();
+    console.log(text2);
+  } catch (error) {
+    console.log("An error occured", error);
+  }
+}, 2000);
+
+// console.log("hello");
+// console.log("hi");
