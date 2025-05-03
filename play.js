@@ -23,12 +23,25 @@
 
 // console.log(name);
 
-const person = {
-  name: "lance kian",
-  age: 29,
-  greet() {
-    console.log("Hi, I am " + this.name);
-  },
-};
+// const person = {
+//   name: "lance kian",
+//   age: 29,
+//   greet() {
+//     console.log("Hi, I am " + this.name);
+//   },
+// };
 
-console.log(person.greet());
+// console.log(person.greet());
+
+const hobbies = ["Sports", "Cooking"];
+
+for (let hobby of hobbies) {
+  console.log(hobby);
+}
+
+console.log(
+  hobbies.map((hobby) => {
+    return "hobby: " + hobby;
+  })
+);
+console.log(hobbies);
